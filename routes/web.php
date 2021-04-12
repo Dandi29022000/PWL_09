@@ -16,10 +16,10 @@ use Illuminate\Http\Request;
 |
 */
 
-// Route::get('/', [HomeController::class, 'index']);
-
-// Route::get('/about', [AboutController::class, 'about']);
-
-// Route::get('/article/{id}', [ArticleController::class, 'article']);
+Route::get('/', function () {
+    return view('welcome');
+});
 
 Route::resource('mahasiswas', MahasiswaController::class);
+
+Route::get('mahasiswas/nilai/{mahasiswa}', [MahasiswaController::class, 'nilai'])->name('mahasiswas.showNilai');
