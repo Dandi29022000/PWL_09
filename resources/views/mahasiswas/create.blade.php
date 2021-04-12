@@ -33,8 +33,13 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="Kelas">Kelas</label> 
-                            <input type="Kelas" name="Kelas" class="form-control" id="Kelas" aria-describedby="Kelas" >
+                            <label for="Kelas">Kelas</label>
+                            <select name="Kelas" id="Kelas" class="form-control">
+                                <option selected disabled>Pilih Kelas</option>
+                            @foreach($kelas as $Kelas)
+                                <option value="{{ $Kelas->id }}">{{ $Kelas->nama_kelas }}</option>
+                            @endforeach
+                            </select>
                         </div>
 
                         <div class="form-group">
