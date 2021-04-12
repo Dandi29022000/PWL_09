@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MahasiswaController;
+use App\Http\Controllers\CariMahasiswaController;
+use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +16,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', [HomeController::class, 'index']);
+
+// Route::get('/about', [AboutController::class, 'about']);
+
+// Route::get('/article/{id}', [ArticleController::class, 'article']);
+
+Route::resource('mahasiswas', MahasiswaController::class);
